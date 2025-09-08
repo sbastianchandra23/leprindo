@@ -419,33 +419,45 @@ const SidebarGroup = React.forwardRef<
     <div
       ref={ref}
       data-sidebar="group"
-      className={cn("relative flex w-full min-w-0 flex-col p-2", className)}
+      style={{ padding: "0rem 0.5rem" }}
+      className={cn("relative flex w-full min-w-0 flex-col", className)}
       {...props}
     />
   )
 })
 SidebarGroup.displayName = "SidebarGroup"
 
+// OLD Coding 08/09/2025
+// const SidebarGroupLabel = React.forwardRef<
+//   HTMLDivElement,
+//   React.ComponentProps<"div"> & { asChild?: boolean }
+// >(({ className, asChild = false, ...props }, ref) => {
+//   const Comp = asChild ? Slot : "div"
+
+//   return (
+//     <Comp
+//       ref={ref}
+//       data-sidebar="group-label"
+//       className={cn(
+//         "duration-200 flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium text-sidebar-foreground/70 outline-none ring-sidebar-ring transition-[margin,opa] ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+//         "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
+//         className
+//       )}
+//       {...props}
+//     />
+//   )
+// })
+// SidebarGroupLabel.displayName = "SidebarGroupLabel"
+
 const SidebarGroupLabel = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & { asChild?: boolean }
->(({ className, asChild = false, ...props }, ref) => {
-  const Comp = asChild ? Slot : "div"
+>(function SidebarGroupLabel(_props, _ref) {
+  return null; // aman, tidak render apa2
+});
 
-  return (
-    <Comp
-      ref={ref}
-      data-sidebar="group-label"
-      className={cn(
-        "duration-200 flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium text-sidebar-foreground/70 outline-none ring-sidebar-ring transition-[margin,opa] ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
-        "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
-        className
-      )}
-      {...props}
-    />
-  )
-})
-SidebarGroupLabel.displayName = "SidebarGroupLabel"
+SidebarGroupLabel.displayName = "SidebarGroupLabel";
+
 
 const SidebarGroupAction = React.forwardRef<
   HTMLButtonElement,

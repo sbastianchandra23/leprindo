@@ -30,11 +30,11 @@ export default function SignIn2({
             >
               <path d='M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3'/>
             </svg>
-            Shadcn Admin
+            Payroll Leprindo
           </div>
 
           <img
-            src={ViteLogo}
+            src='https://www.aroleprindo.ac.id/wp-content/uploads/2014/10/Logo-ARO-LEPRINDO-white-e1567699964208.png'
             className='relative m-auto'
             width={301}
             height={60}
@@ -43,30 +43,28 @@ export default function SignIn2({
 
           <div className='relative z-20 mt-auto'>
             <blockquote className='space-y-2'>
-              <p className='text-lg'>
-                &ldquo;This template has saved me countless hours of work and
-                helped me deliver stunning designs to my clients faster than ever
-                before.&rdquo;
+              <p className='text-lg items-center'>
+                &ldquo;Aplikasi Payroll Leprindo.&rdquo;
               </p>
-              <footer className='text-sm'>John Doe</footer>
+              {/*<footer className='text-sm'>John Doe</footer>*/}
             </blockquote>
           </div>
         </div>
         <div className='lg:p-8'>
           <div className='mx-auto flex w-full flex-col justify-center space-y-2 sm:w-[350px]'>
             <div className='flex flex-col space-y-2 text-left'>
-              <h1 className='text-2xl font-semibold tracking-tight'>Login</h1>
-              <p className='text-sm text-muted-foreground'>
+              <h1 className='text-2xl font-semibold tracking-tight text-center'>Login</h1>
+              {/* <p className='text-sm text-muted-foreground'>
                 Enter your email and password below <br/>
                 to log into your account, do not have an account?
                 <Link
                   className='underline underline-offset-4 hover:text-primary'
                   href={route('register')}>Register</Link>
-              </p>
+              </p> */}
             </div>
             <UserAuthForm canResetPassword={canResetPassword} status={status} />
-            <TermPrivacyLink privacyLink={'#'} termLink={'#'} />
-            <SocialButtons isLoading={false}/>
+            {/* <TermPrivacyLink privacyLink={'#'} termLink={'#'} /> */}
+            {/* <SocialButtons isLoading={false}/> */}
           </div>
         </div>
       </div>

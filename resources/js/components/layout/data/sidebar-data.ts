@@ -48,114 +48,23 @@ export const sidebarData: SidebarData = {
       logo: Command,
       plan: 'Vite + ShadcnUI',
     },
-    {
-      name: 'Acme Inc',
-      logo: GalleryVerticalEnd,
-      plan: 'Enterprise',
-    },
-    {
-      name: 'Acme Corp.',
-      logo: AudioWaveform,
-      plan: 'Startup',
-    },
   ],
   navGroups: [
     {
-      title: 'General',
+      // title: 'General',
       items: [
         {
           title: 'Dashboard',
           url: '/dashboard',
           icon: IconLayoutDashboard,
-        },
-        {
-          title: 'Tasks',
-          url: '/dashboard/tasks',
-          icon: IconChecklist,
-        },
-        {
-          title: 'Mail',
-          url: '/dashboard/mail',
-          icon: IconMail,
-        },
-        {
-          title: 'Apps',
-          url: '/dashboard/apps',
-          icon: IconPackages,
-        },
-        {
-          title: 'Chats',
-          url: '/dashboard/chats',
-          badge: '3',
-          icon: IconMessages,
-        },
-        {
-          title: 'Ai Chats',
-          url: '/dashboard/chat-ai',
-          icon: IconRobot,
-        },
-        {
-          title: 'Charts',
-          url: '/dashboard/charts',
-          icon: IconChartBar,
-        },
-        {
-          title: 'Users',
-          url: '/dashboard/users',
-          icon: IconUsers,
-        },
+        }
       ],
     },
     {
-      title: 'Ecommerce',
+      // title: 'Pages',
       items: [
         {
-          title: 'Orders',
-          url: '/dashboard/orders',
-          icon: IconShoppingBag,
-        },
-        {
-          title: 'Products',
-          url: '/dashboard/products',
-          icon: IconShoppingBagDiscount,
-        },
-        {
-          title: 'Product',
-          url: '/dashboard/products/edit',
-          icon: IconShoe,
-        },
-      ],
-    },
-    {
-      title: 'Blog',
-      items: [
-        {
-          title: 'Posts',
-          url: '/dashboard/blog/posts',
-          icon: IconArticle,
-        },
-        {
-          title: 'Add Post',
-          url: '/dashboard/blog/posts/create',
-          icon: IconEdit,
-        },
-        {
-          title: 'Categories',
-          url: '/dashboard/blog/categories',
-          icon: IconCategory,
-        },
-        {
-          title: 'Tags',
-          url: '/dashboard/blog/tags',
-          icon: IconTags,
-        },
-      ],
-    },
-    {
-      title: 'Pages',
-      items: [
-        {
-          title: 'Auth',
+          title: 'Master',
           icon: IconLockAccess,
           items: [
             {
@@ -214,7 +123,53 @@ export const sidebarData: SidebarData = {
       ],
     },
     {
-      title: 'Other',
+      // title: 'Ecommerce',
+      items: [
+        {
+          title: 'Orders',
+          url: '/dashboard/orders',
+          icon: IconShoppingBag,
+        },
+        {
+          title: 'Products',
+          url: '/dashboard/products',
+          icon: IconShoppingBagDiscount,
+        },
+        {
+          title: 'Product',
+          url: '/dashboard/products/edit',
+          icon: IconShoe,
+        },
+      ],
+    },
+    {
+      // title: 'Blog',
+      items: [
+        {
+          title: 'Posts',
+          url: '/dashboard/blog/posts',
+          icon: IconArticle,
+        },
+        {
+          title: 'Add Post',
+          url: '/dashboard/blog/posts/create',
+          icon: IconEdit,
+        },
+        {
+          title: 'Categories',
+          url: '/dashboard/blog/categories',
+          icon: IconCategory,
+        },
+        {
+          title: 'Tags',
+          url: '/dashboard/blog/tags',
+          icon: IconTags,
+        },
+      ],
+    },
+    
+    {
+      // title: 'Other',
       items: [
         {
           title: 'Settings',

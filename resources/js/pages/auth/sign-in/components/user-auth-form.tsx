@@ -15,8 +15,8 @@ type UserAuthFormProps = HTMLAttributes<HTMLDivElement> & {
 
 export function UserAuthForm({ className, status, canResetPassword = true, ...props }: UserAuthFormProps) {
   const { data, setData, post, processing, errors, reset } = useForm({
-    email: 'shadcn@gmail.com',
-    password: 'password',
+    email: '',
+    password: '',
     remember: false,
   });
 
@@ -56,7 +56,7 @@ export function UserAuthForm({ className, status, canResetPassword = true, ...pr
           <div className='space-y-1'>
             <div className='flex items-center justify-between'>
               <Label htmlFor="password">Password</Label>
-              {canResetPassword && (
+              {/* {canResetPassword && (
                 <Link
                   href={route('password.request')}
                   className='text-sm font-medium text-muted-foreground hover:opacity-75'
@@ -64,7 +64,7 @@ export function UserAuthForm({ className, status, canResetPassword = true, ...pr
                 >
                   Forgot password?
                 </Link>
-              )}
+              )} */}
             </div>
             <PasswordInput
               id="password"
@@ -76,7 +76,7 @@ export function UserAuthForm({ className, status, canResetPassword = true, ...pr
             <InputError message={errors.password} className="mt-2" />
           </div>
 
-          <div className="flex flex-row items-center space-x-2 space-y-0 mt-2">
+          {/* <div className="flex flex-row items-center space-x-2 space-y-0 mt-2">
             <Checkbox
               id="remember"
               checked={data.remember}
@@ -89,7 +89,7 @@ export function UserAuthForm({ className, status, canResetPassword = true, ...pr
             <label htmlFor="remember" className="text-sm font-normal text-muted-foreground">
               Remember me
             </label>
-          </div>
+          </div> */}
 
           <Button className='mt-4' disabled={processing}>
             {processing ? 'Logging in...' : 'Login'}
