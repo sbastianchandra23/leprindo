@@ -44,9 +44,9 @@ export const sidebarData: SidebarData = {
   },
   teams: [
     {
-      name: 'Shadcn Admin',
+      name: 'Payroll Leprindo',
       logo: Command,
-      plan: 'Vite + ShadcnUI',
+      // plan: 'Vite + ShadcnUI',
     },
   ],
   navGroups: [

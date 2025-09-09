@@ -52,10 +52,10 @@ export function AuthenticatedLayout({
         <AppSidebar/>
         <SidebarInset>
           {showHeader && <Header>
-            {withTopNav && <TopNav links={topNav}/>}
-            {!withTopNav && <Search/>}
+            {/* {withTopNav && <TopNav links={topNav}/>} */}
+            {/* {!withTopNav && <Search/>} */}
             <div className='ml-auto flex items-center space-x-4'>
-              {withTopNav && <Search/>}
+              {/* {withTopNav && <Search/>} */}
               <ThemeSwitch/>
               <ProfileDropdown/>
             </div>

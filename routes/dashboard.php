@@ -4,7 +4,23 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', fn () => Inertia::render('dashboard/index'))->name('dashboard');
+// Route::get('/', function () {
+//     return Inertia::render('dashboard/index', [
+//         'auth' => [
+//             'user' => Auth::user(),
+//         ],
+//     ]);
+// });
+
+Route::get('/', function () {
+    return Inertia::render('dashboard/index',  [
+        'auth' => [
+            'user' => Auth::user(),
+        ],
+    ]);
+})->name('dashboard');
+
+// Route::get('/', fn () => Inertia::render('dashboard/index'))->name('dashboard');
 
 Route::group(['prefix' => '/settings'], function () {
     Route::get('/', fn () => Inertia::render('settings/profile/index'))->name('dashboard.contacts.index');

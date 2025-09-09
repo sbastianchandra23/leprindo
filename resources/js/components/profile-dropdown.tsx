@@ -15,13 +15,24 @@ import {Link, usePage} from "@inertiajs/react"
 
 export function ProfileDropdown() {
   const {auth} = usePage().props
+
+  function Initials({ name }) {
+    const initials = name
+      .split(" ")             // pecah jadi array kata
+      .map(word => word[0])   // ambil huruf pertama tiap kata
+      .join("")               // gabung lagi jadi string
+      .toUpperCase();         // kapital semua
+
+    return <span>{initials}</span>;
+  }
+
   return (
     <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button variant='ghost' className='relative h-8 w-8 rounded-full'>
           <Avatar className='h-8 w-8'>
             <AvatarImage src='/avatars/01.png' alt={`@${auth?.user?.name}`} />
-            <AvatarFallback>SN</AvatarFallback>
+            <AvatarFallback><Initials name={auth?.user?.name} /></AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
